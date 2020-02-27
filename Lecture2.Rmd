@@ -1,0 +1,27 @@
+---
+title: "Lecture 2"
+output: html_document
+---
+
+```{r mylongcode, cache=TRUE}
+x = rnorm(10^6, mean = 2, sd = 2)
+hist(x)
+# long computation
+Sys.sleep(3)
+```
+
+```{r, cache=TRUE, dependson='mylongcode'}
+a = 5
+```
+
+```{r, cache=TRUE, dependson='mylongcode'}
+(b = 2*a)
+```
+<button data-toggle="collapse" data-target="#demo">
+More info
+</button>
+<div id="demo" class="collapse">
+<p>Some additional info… :)</p>
+</div>
+<br>
+<br>
